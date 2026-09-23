@@ -37,7 +37,7 @@
     <div class="hdr-inner">
       <a href="#accueil" class="logo-link" aria-label="AMM — Accueil">
         <img id="logo-img" src="Logo.png" alt="Logo AMM" class="logo-img" />
-        <span id="logo-txt" class="logo-txt font-display">AMM</span>
+        <span id="logo-txt" class="logo-txt font-display"></span>
       </a>
 
       <nav class="main-nav" aria-label="Navigation principale">
@@ -67,34 +67,189 @@
   </header>
 
   <!-- HERO -->
-  <section id="accueil" class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
+ <section id="accueil" class="hero" aria-label="Accueil">
 
-    <div class="hero-body">
-      <span class="hero-eyebrow font-display">Production béton sur chantier</span>
+  <!-- SLIDER IMAGES -->
+  <div class="slider" id="slider">
 
-      <h1 class="hero-h1 font-display">
-        VOTRE CHANTIER DÉPEND-IL<br />
-        ENCORE DE LA <span class="text-brand">DISPONIBILITÉ DU BÉTON ?</span>
-      </h1>
+    <!-- Même noms d'images que la première landing page -->
+    <div class="slide slide-1 on" data-idx="0"></div>
 
-      <p class="hero-sub">
-        Lorsque l’approvisionnement devient une contrainte, produire directement sur chantier
-        peut être une solution à étudier selon votre projet, vos volumes et votre organisation.
-      </p>
+    <div class="slide slide-2" data-idx="1"></div>
 
-      <div class="hero-btns">
-        <a href="#qualification" class="btn-red">Étudier mon besoin</a>
-        <a href="#probleme" class="btn-ghost">Voir si je suis concerné →</a>
-      </div>
+    <div class="slide slide-3" data-idx="2"></div>
 
-      <div class="hero-note">
-        <span class="hero-note-dot"></span>
-        Quelques questions suffisent pour mieux cadrer votre besoin.
-      </div>
+  </div>
+
+
+  <!-- OVERLAY -->
+  <div class="hero-overlay"></div>
+
+
+  <!-- CONTENU -->
+  <div class="hero-body">
+
+    <span class="hero-eyebrow font-display">
+      Production béton sur chantier
+    </span>
+
+
+    <h1 class="hero-h1 font-display">
+
+      VOTRE CHANTIER DÉPEND-IL<br />
+
+      ENCORE DE LA
+
+      <span class="text-brand">
+        DISPONIBILITÉ DU BÉTON ?
+      </span>
+
+    </h1>
+
+
+    <p class="hero-sub">
+
+      Lorsque l’approvisionnement devient une contrainte,
+      produire directement sur chantier peut être une solution
+      à étudier selon votre projet, vos volumes
+      et votre organisation.
+
+    </p>
+
+
+    <div class="hero-btns">
+
+      <a
+        href="#qualification"
+        class="btn-red"
+      >
+        Étudier mon besoin
+      </a>
+
+
+      <a
+        href="#probleme"
+        class="btn-ghost"
+      >
+        Voir si je suis concerné →
+      </a>
+
     </div>
-  </section>
+
+
+    <div class="hero-note">
+
+      <span class="hero-note-dot"></span>
+
+      Quelques questions suffisent pour mieux cadrer votre besoin.
+
+    </div>
+
+  </div>
+
+
+  <!-- CONTRÔLES DU SLIDER -->
+  <div
+    class="slider-ctrl"
+    aria-label="Navigation du slider"
+  >
+
+    <!-- PREVIOUS -->
+    <button
+      class="s-arr"
+      id="s-prev"
+      aria-label="Image précédente"
+    >
+
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+
+        <path
+          d="M15 18l-6-6 6-6"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+      </svg>
+
+    </button>
+
+
+    <!-- DOTS -->
+    <div
+      class="s-dots"
+      id="s-dots"
+    >
+
+      <button
+        class="s-dot s-dot-on"
+        data-to="0"
+        aria-label="Image 1"
+      ></button>
+
+
+      <button
+        class="s-dot"
+        data-to="1"
+        aria-label="Image 2"
+      ></button>
+
+
+      <button
+        class="s-dot"
+        data-to="2"
+        aria-label="Image 3"
+      ></button>
+
+    </div>
+
+
+    <!-- NEXT -->
+    <button
+      class="s-arr"
+      id="s-next"
+      aria-label="Image suivante"
+    >
+
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+
+        <path
+          d="M9 18l6-6-6-6"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+      </svg>
+
+    </button>
+
+  </div>
+
+
+  <!-- BARRE DE PROGRESSION -->
+  <div class="prog-track">
+
+    <div
+      class="prog-bar"
+      id="prog-bar"
+    ></div>
+
+  </div>
+
+</section>
 
   <!-- SECTION PROBLÈME -->
   <section id="probleme" class="sec-light">

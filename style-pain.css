@@ -340,90 +340,565 @@ ul {
   border-bottom: 1px solid rgba(255,255,255,.07);
 }
 
-/* Hero */
+/* ================================================================
+   HERO / SLIDER
+================================================================ */
+
 .hero {
-  min-height: 100vh;
   position: relative;
+
+  min-height: 100vh;
+
   display: flex;
+
   align-items: center;
-  padding-top: var(--header-h);
+
   overflow: hidden;
+
+  padding-top: var(--header-h);
 }
 
-.hero-bg {
+
+/* ================================================================
+   SLIDER
+================================================================ */
+
+.slider {
   position: absolute;
+
   inset: 0;
-  background: url('Assets/2.png') center/cover no-repeat;
-  transform: scale(1.02);
 }
+
+
+.slide {
+  position: absolute;
+
+  inset: 0;
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  opacity: 0;
+
+  transform: scale(1.03);
+
+  transition:
+    opacity 1.1s ease,
+    transform 6s ease;
+}
+
+
+.slide.on {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+
+/* ================================================================
+   IMAGES
+   Même noms que la première landing page
+================================================================ */
+
+.slide-1 {
+  background-image: url('Assets/2.png');
+}
+
+
+.slide-2 {
+  background-image: url('Assets/6.png');
+}
+
+
+.slide-3 {
+  background-image: url('Assets/7.png');
+}
+
+
+/* ================================================================
+   OVERLAY
+================================================================ */
 
 .hero-overlay {
+
   position: absolute;
+
   inset: 0;
+
+  z-index: 1;
+
+
   background:
-    linear-gradient(90deg, rgba(8,8,8,.94) 0%, rgba(8,8,8,.82) 45%, rgba(8,8,8,.35) 78%, rgba(8,8,8,.55) 100%),
-    linear-gradient(180deg, rgba(8,8,8,.25), rgba(8,8,8,.85));
+
+    linear-gradient(
+      90deg,
+
+      rgba(8, 8, 8, 0.95) 0%,
+
+      rgba(8, 8, 8, 0.84) 42%,
+
+      rgba(8, 8, 8, 0.45) 72%,
+
+      rgba(8, 8, 8, 0.55) 100%
+    ),
+
+    linear-gradient(
+      180deg,
+
+      rgba(8, 8, 8, 0.2) 0%,
+
+      rgba(8, 8, 8, 0.25) 50%,
+
+      rgba(8, 8, 8, 0.92) 100%
+    );
+
 }
+
+
+/* ================================================================
+   HERO CONTENT
+================================================================ */
 
 .hero-body {
+
   position: relative;
+
   z-index: 2;
+
+
   max-width: 1200px;
+
   width: 100%;
+
+
   margin: 0 auto;
-  padding: 4rem 1.5rem 6rem;
+
+
+  padding:
+
+    4rem
+    1.5rem
+    8rem;
+
 }
+
 
 .hero-eyebrow {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 600;
-  font-size: .72rem;
-  letter-spacing: .28em;
-  text-transform: uppercase;
-  color: var(--red);
+
   display: block;
+
+
+  font-family:
+    'Oswald',
+    sans-serif;
+
+
+  font-weight: 600;
+
+
+  font-size: 0.72rem;
+
+
+  letter-spacing: 0.28em;
+
+
+  text-transform: uppercase;
+
+
+  color: var(--red);
+
+
   margin-bottom: 1rem;
+
 }
+
 
 .hero-h1 {
-  font-family: 'Oswald', sans-serif;
+
+  font-family:
+    'Oswald',
+    sans-serif;
+
+
   font-weight: 700;
-  font-size: clamp(2.9rem, 7vw, 6.6rem);
-  line-height: .94;
+
+
+  font-size:
+
+    clamp(
+      2.9rem,
+      7vw,
+      6.6rem
+    );
+
+
+  line-height: 0.94;
+
+
   max-width: 1000px;
+
+
   text-transform: uppercase;
+
+
+  color: var(--white);
+
+
   margin-bottom: 1.6rem;
+
 }
+
 
 .hero-sub {
+
   max-width: 42rem;
+
+
   font-size: 1.08rem;
+
+
   font-weight: 300;
-  color: rgba(255,255,255,.74);
+
+
+  color:
+
+    rgba(
+      255,
+      255,
+      255,
+      0.75
+    );
+
+
   line-height: 1.8;
+
+
   margin-bottom: 2.2rem;
+
 }
+
 
 .hero-btns {
+
   display: flex;
-  gap: 1rem;
+
   flex-wrap: wrap;
+
+  gap: 1rem;
+
 }
+
 
 .hero-note {
+
   display: flex;
+
   align-items: center;
-  gap: .55rem;
+
+  gap: 0.55rem;
+
+
   margin-top: 1.1rem;
-  color: rgba(255,255,255,.45);
-  font-size: .8rem;
+
+
+  color:
+
+    rgba(
+      255,
+      255,
+      255,
+      0.5
+    );
+
+
+  font-size: 0.8rem;
+
 }
 
+
 .hero-note-dot {
+
   width: 7px;
+
   height: 7px;
+
+
   border-radius: 50%;
+
+
   background: var(--red);
+
+}
+
+
+/* ================================================================
+   SLIDER CONTROLS
+================================================================ */
+
+.slider-ctrl {
+
+  position: absolute;
+
+
+  right: 2rem;
+
+  bottom: 3.5rem;
+
+
+  z-index: 5;
+
+
+  display: flex;
+
+  align-items: center;
+
+
+  gap: 0.85rem;
+
+}
+
+
+.s-arr {
+
+  width: 40px;
+
+  height: 40px;
+
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+  border:
+
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.28
+    );
+
+
+  border-radius:
+    var(--radius);
+
+
+  color:
+    var(--white);
+
+
+  background:
+    rgba(
+      8,
+      8,
+      8,
+      0.25
+    );
+
+
+  backdrop-filter:
+    blur(6px);
+
+
+  transition:
+    background var(--t),
+    border-color var(--t);
+
+}
+
+
+.s-arr:hover {
+
+  background:
+    var(--red);
+
+
+  border-color:
+    var(--red);
+
+}
+
+
+/* ================================================================
+   DOTS
+================================================================ */
+
+.s-dots {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+}
+
+
+.s-dot {
+
+  width: 8px;
+
+  height: 8px;
+
+
+  border-radius: 50%;
+
+
+  background:
+
+    rgba(
+      255,
+      255,
+      255,
+      0.35
+    );
+
+
+  border: none;
+
+
+  transition:
+
+    background var(--t),
+
+    width var(--t),
+
+    border-radius var(--t);
+
+}
+
+
+.s-dot-on {
+
+  width: 28px;
+
+
+  border-radius: 4px;
+
+
+  background:
+    var(--red);
+
+}
+
+
+/* ================================================================
+   PROGRESS BAR
+================================================================ */
+
+.prog-track {
+
+  position: absolute;
+
+
+  bottom: 0;
+
+  left: 0;
+
+  right: 0;
+
+
+  height: 3px;
+
+
+  background:
+
+    rgba(
+      255,
+      255,
+      255,
+      0.08
+    );
+
+
+  z-index: 5;
+
+}
+
+
+.prog-bar {
+
+  height: 100%;
+
+
+  width: 0%;
+
+
+  background:
+    var(--red);
+
+}
+
+
+/* ================================================================
+   RESPONSIVE HERO
+================================================================ */
+
+@media (max-width: 768px) {
+
+  .hero-h1 {
+
+    font-size:
+
+      clamp(
+        2.6rem,
+        11vw,
+        4.8rem
+      );
+
+  }
+
+
+  .slider-ctrl {
+
+    right: 1rem;
+
+    bottom: 2.5rem;
+
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .hero-body {
+
+    padding-bottom: 7rem;
+
+  }
+
+
+  .hero-btns {
+
+    flex-direction: column;
+
+  }
+
+
+  .hero-btns .btn-red,
+  .hero-btns .btn-ghost {
+
+    width: 100%;
+
+  }
+
+
+  .s-arr {
+
+    width: 36px;
+
+    height: 36px;
+
+  }
+
 }
 
 /* Pain cards */

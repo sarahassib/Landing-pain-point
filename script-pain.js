@@ -7,8 +7,365 @@
 const CONFIG = {
   // Remplacez par votre URL Google Apps Script.
   // Laissez vide pendant vos tests si vous ne souhaitez pas encore envoyer les leads.
-  GOOGLE_SCRIPT_URL: ''
+  GOOGLE_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbwbpz4bJaI2cz6JJjtSYPI8rU-5ooicBmp8Y9MOHERNhxs9nOcsA4sGax554aa_Mqiz/exec'
 };
+
+/* ================================================================
+   HERO SLIDER
+================================================================ */
+
+(function initHeroSlider() {
+
+  const slides =
+    document.querySelectorAll('.slide');
+
+
+  const dots =
+    document.querySelectorAll('.s-dot');
+
+
+  const prevButton =
+    document.getElementById('s-prev');
+
+
+  const nextButton =
+    document.getElementById('s-next');
+
+
+  const progressBar =
+    document.getElementById('prog-bar');
+
+
+  const hero =
+    document.getElementById('accueil');
+
+
+  if (!slides.length) return;
+
+
+  /* Durée de chaque image */
+
+  const SLIDE_DURATION = 5500;
+
+
+  let current = 0;
+
+  let autoplay = null;
+
+
+  /* ================================================================
+     AFFICHER UNE SLIDE
+  ================================================================ */
+
+  function goTo(index) {
+
+    /* Retirer slide actuelle */
+
+    slides[current]
+      .classList
+      .remove('on');
+
+
+    if (dots[current]) {
+
+      dots[current]
+        .classList
+        .remove('s-dot-on');
+
+    }
+
+
+    /* Calcul nouvel index */
+
+    current =
+      (
+        index +
+        slides.length
+      )
+      %
+      slides.length;
+
+
+    /* Afficher nouvelle slide */
+
+    slides[current]
+      .classList
+      .add('on');
+
+
+    if (dots[current]) {
+
+      dots[current]
+        .classList
+        .add('s-dot-on');
+
+    }
+
+
+    resetProgress();
+
+  }
+
+
+  /* ================================================================
+     BARRE DE PROGRESSION
+  ================================================================ */
+
+  function resetProgress() {
+
+    if (!progressBar) return;
+
+
+    progressBar.style.transition =
+      'none';
+
+
+    progressBar.style.width =
+      '0%';
+
+
+    /*
+     * Force navigateur
+     * à recalculer le layout
+     */
+
+    void progressBar.offsetWidth;
+
+
+    progressBar.style.transition =
+      `width ${SLIDE_DURATION}ms linear`;
+
+
+    progressBar.style.width =
+      '100%';
+
+  }
+
+
+  /* ================================================================
+     AUTOPLAY
+  ================================================================ */
+
+  function startAutoplay() {
+
+    clearInterval(
+      autoplay
+    );
+
+
+    autoplay =
+      setInterval(
+        () => {
+
+          goTo(
+            current + 1
+          );
+
+        },
+
+        SLIDE_DURATION
+
+      );
+
+  }
+
+
+  /* ================================================================
+     BOUTON PRÉCÉDENT
+  ================================================================ */
+
+  if (prevButton) {
+
+    prevButton.addEventListener(
+      'click',
+      () => {
+
+        goTo(
+          current - 1
+        );
+
+
+        startAutoplay();
+
+      }
+    );
+
+  }
+
+
+  /* ================================================================
+     BOUTON SUIVANT
+  ================================================================ */
+
+  if (nextButton) {
+
+    nextButton.addEventListener(
+      'click',
+      () => {
+
+        goTo(
+          current + 1
+        );
+
+
+        startAutoplay();
+
+      }
+    );
+
+  }
+
+
+  /* ================================================================
+     DOTS
+  ================================================================ */
+
+  dots.forEach(dot => {
+
+    dot.addEventListener(
+      'click',
+      () => {
+
+        const target =
+          parseInt(
+            dot.dataset.to,
+            10
+          );
+
+
+        if (
+          target !== current
+        ) {
+
+          goTo(target);
+
+          startAutoplay();
+
+        }
+
+      }
+    );
+
+  });
+
+
+  /* ================================================================
+     CLAVIER
+  ================================================================ */
+
+  document.addEventListener(
+    'keydown',
+    event => {
+
+      if (
+        event.key ===
+        'ArrowLeft'
+      ) {
+
+        goTo(
+          current - 1
+        );
+
+
+        startAutoplay();
+
+      }
+
+
+      if (
+        event.key ===
+        'ArrowRight'
+      ) {
+
+        goTo(
+          current + 1
+        );
+
+
+        startAutoplay();
+
+      }
+
+    }
+  );
+
+
+  /* ================================================================
+     PAUSE AU SURVOL
+  ================================================================ */
+
+  if (hero) {
+
+    hero.addEventListener(
+      'mouseenter',
+      () => {
+
+        clearInterval(
+          autoplay
+        );
+
+
+        if (progressBar) {
+
+          progressBar.style.transition =
+            'none';
+
+        }
+
+      }
+    );
+
+
+    hero.addEventListener(
+      'mouseleave',
+      () => {
+
+        startAutoplay();
+
+        resetProgress();
+
+      }
+    );
+
+  }
+
+
+  /* ================================================================
+     INITIALISATION
+  ================================================================ */
+
+  slides.forEach(
+    (slide, index) => {
+
+      slide.classList.toggle(
+        'on',
+        index === 0
+      );
+
+    }
+  );
+
+
+  dots.forEach(
+    (dot, index) => {
+
+      dot.classList.toggle(
+        's-dot-on',
+        index === 0
+      );
+
+    }
+  );
+
+
+  current = 0;
+
+
+  resetProgress();
+
+  startAutoplay();
+
+}());
 
 
 /* ================================================================
