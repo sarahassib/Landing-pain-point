@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMM — Produire votre béton directement sur chantier</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#C8181A',
+            'brand-hov': '#A01214',
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="style-pain.css" />
+</head>
+
+<body class="font-body bg-black text-white">
+
+  <!-- HEADER -->
+  <header id="site-header" class="site-header">
+    <div class="hdr-inner">
+      <a href="#accueil" class="logo-link" aria-label="AMM — Accueil">
+        <img id="logo-img" src="Logo.png" alt="Logo AMM" class="logo-img" />
+        <span id="logo-txt" class="logo-txt font-display">AMM</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#probleme" class="nav-lnk">Votre problème</a>
+        <a href="#solution" class="nav-lnk">La solution</a>
+        <a href="#methode" class="nav-lnk">Notre méthode</a>
+        <a href="#qualification" class="nav-lnk">Étudier mon projet</a>
+      </nav>
+
+      <div class="hdr-right">
+        <a href="#qualification" class="btn-red hidden sm:inline-flex">Étudier mon projet</a>
+        <button id="burger" class="burger" aria-label="Menu" aria-expanded="false" aria-controls="mob-nav">
+          <span class="bline"></span>
+          <span class="bline"></span>
+          <span class="bline"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mob-nav" class="mob-nav" aria-hidden="true" aria-label="Navigation mobile">
+      <a href="#probleme" class="mob-lnk font-display">Votre problème</a>
+      <a href="#solution" class="mob-lnk font-display">La solution</a>
+      <a href="#methode" class="mob-lnk font-display">Notre méthode</a>
+      <a href="#qualification" class="mob-lnk font-display">Étudier mon projet</a>
+      <a href="#qualification" class="btn-red mt-3 text-center block">Étudier mon projet</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="accueil" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-body">
+      <span class="hero-eyebrow font-display">Production béton sur chantier</span>
+
+      <h1 class="hero-h1 font-display">
+        VOTRE CHANTIER DÉPEND-IL<br />
+        ENCORE DE LA <span class="text-brand">DISPONIBILITÉ DU BÉTON ?</span>
+      </h1>
+
+      <p class="hero-sub">
+        Lorsque l’approvisionnement devient une contrainte, produire directement sur chantier
+        peut être une solution à étudier selon votre projet, vos volumes et votre organisation.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#qualification" class="btn-red">Étudier mon besoin</a>
+        <a href="#probleme" class="btn-ghost">Voir si je suis concerné →</a>
+      </div>
+
+      <div class="hero-note">
+        <span class="hero-note-dot"></span>
+        Quelques questions suffisent pour mieux cadrer votre besoin.
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION PROBLÈME -->
+  <section id="probleme" class="sec-light">
+    <div class="sec-wrap">
+      <div class="sec-head fade-up">
+        <span class="eyebrow font-display">Votre situation</span>
+        <h2 class="sec-title font-display text-black">
+          VOUS RECONNAISSEZ-VOUS<br />
+          <span class="text-brand">DANS L'UNE DE CES SITUATIONS ?</span>
+        </h2>
+        <p class="sec-sub-dark">
+          L’objectif n’est pas de vous proposer une machine trop vite.
+          Il faut d’abord comprendre ce qui freine réellement votre organisation.
+        </p>
+      </div>
+
+      <div class="pain-grid">
+        <article class="pain-card fade-up">
+          <div class="pain-n font-display">01</div>
+          <h3 class="pain-title font-display">Livraisons difficiles à coordonner</h3>
+          <p class="pain-txt">
+            Votre planning dépend d’une logistique extérieure et vous cherchez plus de maîtrise
+            sur la disponibilité du béton.
+          </p>
+        </article>
+
+        <article class="pain-card fade-up">
+          <div class="pain-n font-display">02</div>
+          <h3 class="pain-title font-display">Besoin de béton directement sur chantier</h3>
+          <p class="pain-txt">
+            Votre projet nécessite une production au plus près des opérations, selon les contraintes du site.
+          </p>
+        </article>
+
+        <article class="pain-card fade-up">
+          <div class="pain-n font-display">03</div>
+          <h3 class="pain-title font-display">Volumes importants ou réguliers</h3>
+          <p class="pain-txt">
+            Votre besoin justifie d’étudier une solution dédiée plutôt que de dépendre uniquement
+            d’un approvisionnement externe.
+          </p>
+        </article>
+
+        <article class="pain-card fade-up">
+          <div class="pain-n font-display">04</div>
+          <h3 class="pain-title font-display">Nouveau chantier à préparer</h3>
+          <p class="pain-txt">
+            Vous devez estimer la bonne configuration avant de prendre une décision d’investissement.
+          </p>
+        </article>
+      </div>
+
+      <div class="center-cta fade-up">
+        <a href="#qualification" class="btn-red">Décrire mon projet</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION TRANSITION -->
+  <section id="solution" class="sec-dark">
+    <div class="sec-wrap">
+      <div class="split-grid">
+        <div class="fade-up">
+          <span class="eyebrow font-display">Changer de logique</span>
+          <h2 class="sec-title font-display text-white">
+            ET SI VOUS PRODUISIEZ<br />
+            <span class="text-brand">DIRECTEMENT SUR SITE ?</span>
+          </h2>
+
+          <p class="big-copy">
+            Pour certains projets, une centrale dédiée peut permettre de rapprocher la production
+            de béton des besoins réels du chantier.
+          </p>
+
+          <p class="muted-copy">
+            La configuration doit cependant être étudiée selon le type de projet, les volumes,
+            l’espace disponible, l’organisation du chantier et les contraintes techniques.
+          </p>
+
+          <a href="#qualification" class="btn-red mt-8 inline-flex">Vérifier si cette solution me correspond</a>
+        </div>
+
+        <div class="compare-card fade-up">
+          <div class="compare-col">
+            <span class="compare-label">Situation actuelle</span>
+            <h3 class="compare-title font-display">Approvisionnement externe</h3>
+            <ul class="compare-list">
+              <li>Dépendance à l’organisation des livraisons</li>
+              <li>Coordination avec plusieurs intervenants</li>
+              <li>Planning à synchroniser avec les disponibilités</li>
+            </ul>
+          </div>
+
+          <div class="compare-arrow">→</div>
+
+          <div class="compare-col compare-col-red">
+            <span class="compare-label">Option à étudier</span>
+            <h3 class="compare-title font-display">Production sur chantier</h3>
+            <ul class="compare-list">
+              <li>Production rapprochée du besoin</li>
+              <li>Configuration adaptée au projet</li>
+              <li>Organisation à valider selon contraintes réelles</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTHODE -->
+  <section id="methode" class="sec-light">
+    <div class="sec-wrap">
+      <div class="sec-head text-center fade-up">
+        <span class="eyebrow font-display">Méthode AMM</span>
+        <h2 class="sec-title font-display text-black">
+          AVANT DE PARLER MACHINE,<br />
+          <span class="text-brand">CADRONS VOTRE BESOIN</span>
+        </h2>
+        <p class="sec-sub-dark centered">
+          Une centrale adaptée commence par un besoin bien défini.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card fade-up">
+          <span class="step-num font-display">01</span>
+          <h3 class="step-title font-display">Votre chantier</h3>
+          <p>Type de projet, localisation, contraintes d’installation et organisation du site.</p>
+        </article>
+
+        <article class="step-card fade-up">
+          <span class="step-num font-display">02</span>
+          <h3 class="step-title font-display">Votre production</h3>
+          <p>Besoin estimé, rythme souhaité et niveau d’avancement de votre projet.</p>
+        </article>
+
+        <article class="step-card fade-up">
+          <span class="step-num font-display">03</span>
+          <h3 class="step-title font-display">Votre configuration</h3>
+          <p>Orientation vers une solution adaptée, sous réserve de validation technique.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section class="sec-solutions">
+    <div class="sec-wrap">
+      <div class="sec-head fade-up">
+        <span class="eyebrow font-display">Configurations possibles</span>
+        <h2 class="sec-title font-display text-white">
+          PLUSIEURS SOLUTIONS,<br />
+          <span class="text-brand">UN BESOIN À BIEN DÉFINIR</span>
+        </h2>
+      </div>
+
+      <div class="solution-grid">
+        <article class="solution-card fade-up">
+          <div class="solution-img-wrap">
+            <img src="Assets/01.png" alt="Centrale à béton chantier AMM" class="solution-img" />
+          </div>
+          <div class="solution-body">
+            <h3 class="solution-title font-display">Centrale chantier</h3>
+            <p>Pour une production directement liée aux besoins d’un chantier ou d’un projet spécifique.</p>
+          </div>
+        </article>
+
+        <article class="solution-card fade-up">
+          <div class="solution-img-wrap">
+            <img src="Assets/02.jpg" alt="Centrale à béton mobile AMM" class="solution-img" />
+          </div>
+          <div class="solution-body">
+            <h3 class="solution-title font-display">Centrale mobile</h3>
+            <p>Pour les projets nécessitant une configuration adaptée à la mobilité ou au déploiement sur site.</p>
+          </div>
+        </article>
+
+        <article class="solution-card fade-up">
+          <div class="solution-img-wrap">
+            <img src="Assets/03.png" alt="Centrale à béton modulaire AMM" class="solution-img" />
+          </div>
+          <div class="solution-body">
+            <h3 class="solution-title font-display">Solution modulaire</h3>
+            <p>Pour les projets demandant une configuration spécifique et évolutive.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="choice-box fade-up">
+        <div>
+          <span class="choice-small font-display">Vous ne savez pas laquelle choisir ?</span>
+          <h3 class="choice-title font-display">C'EST PRÉCISÉMENT CE QUE NOUS ALLONS ÉTUDIER.</h3>
+        </div>
+        <a href="#qualification" class="btn-red">Décrire mon besoin</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREUVE -->
+  <section class="proof-section">
+    <div class="sec-wrap">
+      <div class="proof-grid">
+        <div class="proof-img-wrap fade-up">
+          <img src="Assets/usine.png" alt="Installation ou environnement industriel AMM" class="proof-img" />
+          <span class="proof-tag font-display">[PHOTO RÉELLE AMM À VALIDER]</span>
+        </div>
+
+        <div class="proof-content fade-up">
+          <span class="eyebrow font-display">Crédibilité terrain</span>
+          <h2 class="sec-title font-display text-white">
+            UNE SOLUTION DOIT ÊTRE<br />
+            <span class="text-brand">ADAPTÉE AU PROJET RÉEL</span>
+          </h2>
+          <p class="muted-copy">
+            Utilisez ici une réalisation AMM réelle : chantier, centrale installée, atelier ou livraison.
+          </p>
+
+          <div class="proof-placeholders">
+            <div>[référence client à valider]</div>
+            <div>[type de projet à valider]</div>
+            <div>[configuration installée à valider]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec-light">
+    <div class="sec-wrap">
+      <div class="sec-head fade-up">
+        <span class="eyebrow font-display">Questions fréquentes</span>
+        <h2 class="sec-title font-display text-black">
+          AVANT DE PASSER À<br />
+          <span class="text-brand">L'ÉTUDE DE VOTRE PROJET</span>
+        </h2>
+      </div>
+
+      <div class="faq-list">
+        <article class="faq-item fade-up">
+          <button class="faq-btn" type="button" aria-expanded="false">
+            <span>Faut-il déjà connaître la capacité exacte dont j’ai besoin ?</span>
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-panel" hidden>
+            Non. Vous pouvez indiquer une estimation ou sélectionner « Je ne sais pas encore ».
+            L’objectif du formulaire est justement de mieux cadrer votre besoin.
+          </div>
+        </article>
+
+        <article class="faq-item fade-up">
+          <button class="faq-btn" type="button" aria-expanded="false">
+            <span>Cette page me donne-t-elle directement un devis ?</span>
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-panel" hidden>
+            Non. Les informations permettent une première qualification commerciale.
+            Les éléments techniques et commerciaux doivent ensuite être validés par l’équipe AMM.
+          </div>
+        </article>
+
+        <article class="faq-item fade-up">
+          <button class="faq-btn" type="button" aria-expanded="false">
+            <span>Puis-je envoyer ma demande si mon projet est encore en étude ?</span>
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-panel" hidden>
+            Oui. Le niveau d’avancement fait partie des critères de qualification du projet.
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULAIRE DE PRÉQUALIFICATION -->
+  <section id="qualification" class="sec-form">
+    <div class="sec-wrap">
+      <div class="form-hdr fade-up">
+        <span class="eyebrow font-display">Préqualification projet</span>
+        <h2 class="sec-title font-display text-white">
+          PARLEZ-NOUS DE VOTRE<br />
+          <span class="text-brand">PROJET EN QUELQUES ÉTAPES</span>
+        </h2>
+        <p class="form-intro">
+          Vos réponses nous aident à mieux comprendre votre besoin avant le premier échange commercial.
+        </p>
+      </div>
+
+      <div class="form-card fade-up">
+        <div class="progress-wrap" aria-hidden="true">
+          <div class="progress-top">
+            <span>Qualification du projet</span>
+            <span id="form-progress-label">0%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" id="form-progress-bar"></div>
+          </div>
+        </div>
+
+        <form id="lead-form" novalidate aria-label="Formulaire de préqualification">
+
+          <div class="acc" data-name="situation">
+            <button type="button" class="acc-btn" aria-expanded="false" aria-controls="p-situation">
+              <span class="acc-n font-display">01</span>
+              <div class="acc-mid">
+                <span class="acc-q">Quelle situation correspond le mieux à votre besoin ?</span>
+                <span class="acc-v" id="v-situation"></span>
+              </div>
+              <span class="acc-chev">⌄</span>
+            </button>
+            <div id="p-situation" class="acc-panel" hidden>
+              <div class="acc-opts opts-col">
+                <label class="opt"><input type="radio" name="situation" value="Dépendance fournisseurs de béton"><span class="opt-txt">Je dépends actuellement de fournisseurs de béton</span></label>
+                <label class="opt"><input type="radio" name="situation" value="Production sur site"><span class="opt-txt">Je prépare un chantier nécessitant une production sur site</span></label>
+                <label class="opt"><input type="radio" name="situation" value="Augmenter capacité"><span class="opt-txt">Je souhaite augmenter / adapter ma capacité de production</span></label>
+                <label class="opt"><input type="radio" name="situation" value="Nouvelle installation"><span class="opt-txt">Je possède déjà une centrale et j’étudie une nouvelle installation</span></label>
+                <label class="opt"><input type="radio" name="situation" value="Étude comparaison"><span class="opt-txt">Je suis en phase d’étude / comparaison</span></label>
+                <label class="opt"><input type="radio" name="situation" value="Autre"><span class="opt-txt">Autre situation</span></label>
+              </div>
+            </div>
+            <p class="ferr" id="e-situation" hidden>Veuillez sélectionner une option.</p>
+          </div>
+
+          <div class="acc" data-name="projet">
+            <button type="button" class="acc-btn" aria-expanded="false" aria-controls="p-projet">
+              <span class="acc-n font-display">02</span>
+              <div class="acc-mid">
+                <span class="acc-q">Pour quel type de projet recherchez-vous une solution ?</span>
+                <span class="acc-v" id="v-projet"></span>
+              </div>
+              <span class="acc-chev">⌄</span>
+            </button>
+            <div id="p-projet" class="acc-panel" hidden>
+              <div class="acc-opts opts-row">
+                <label class="opt"><input type="radio" name="projet" value="Bâtiment"><span class="opt-txt">Bâtiment</span></label>
+                <label class="opt"><input type="radio" name="projet" value="Route / infrastructure"><span class="opt-txt">Route / infrastructure</span></label>
+                <label class="opt"><input type="radio" name="projet" value="Projet industriel"><span class="opt-txt">Projet industriel</span></label>
+                <label class="opt"><input type="radio" name="projet" value="Promotion immobilière"><span class="opt-txt">Promotion immobilière</span></label>
+                <label class="opt"><input type="radio" name="projet" value="Production de béton"><span class="opt-txt">Production de béton</span></label>
+                <label class="opt"><input type="radio" name="projet" value="Autre"><span class="opt-txt">Autre</span></label>
+              </div>
+            </div>
+            <p class="ferr" id="e-projet" hidden>Veuillez sélectionner une option.</p>
+          </div>
+
+          <div class="acc" data-name="production">
+            <button type="button" class="acc-btn" aria-expanded="false" aria-controls="p-production">
+              <span class="acc-n font-display">03</span>
+              <div class="acc-mid">
+                <span class="acc-q">Quel est votre besoin estimé de production ?</span>
+                <span class="acc-v" id="v-production"></span>
+              </div>
+              <span class="acc-chev">⌄</span>
+            </button>
+            <div id="p-production" class="acc-panel" hidden>
+              <div class="acc-opts opts-row">
+                <label class="opt"><input type="radio" name="production" value="[tranche 1 à valider]"><span class="opt-txt">[tranche 1 à valider]</span></label>
+                <label class="opt"><input type="radio" name="production" value="[tranche 2 à valider]"><span class="opt-txt">[tranche 2 à valider]</span></label>
+                <label class="opt"><input type="radio" name="production" value="[tranche 3 à valider]"><span class="opt-txt">[tranche 3 à valider]</span></label>
+                <label class="opt"><input type="radio" name="production" value="[tranche 4 à valider]"><span class="opt-txt">[tranche 4 à valider]</span></label>
+                <label class="opt opt-wide"><input type="radio" name="production" value="Je ne sais pas encore"><span class="opt-txt">Je ne sais pas encore</span></label>
+              </div>
+            </div>
+            <p class="ferr" id="e-production" hidden>Veuillez sélectionner une option.</p>
+          </div>
+
+          <div class="acc" data-name="avancement">
+            <button type="button" class="acc-btn" aria-expanded="false" aria-controls="p-avancement">
+              <span class="acc-n font-display">04</span>
+              <div class="acc-mid">
+                <span class="acc-q">Où en est votre projet actuellement ?</span>
+                <span class="acc-v" id="v-avancement"></span>
+              </div>
+              <span class="acc-chev">⌄</span>
+            </button>
+            <div id="p-avancement" class="acc-panel" hidden>
+              <div class="acc-opts opts-col">
+                <label class="opt"><input type="radio" name="avancement" value="Projet confirmé"><span class="opt-txt">Projet confirmé / chantier prévu</span></label>
+                <label class="opt"><input type="radio" name="avancement" value="Budget en validation"><span class="opt-txt">Budget ou investissement en validation</span></label>
+                <label class="opt"><input type="radio" name="avancement" value="Comparaison fournisseurs"><span class="opt-txt">Comparaison de solutions / fournisseurs</span></label>
+                <label class="opt"><input type="radio" name="avancement" value="Étude technique"><span class="opt-txt">Étude technique en cours</span></label>
+                <label class="opt"><input type="radio" name="avancement" value="Exploration"><span class="opt-txt">Exploration / information</span></label>
+              </div>
+            </div>
+            <p class="ferr" id="e-avancement" hidden>Veuillez sélectionner une option.</p>
+          </div>
+
+          <div class="acc" data-name="delai">
+            <button type="button" class="acc-btn" aria-expanded="false" aria-controls="p-delai">
+              <span class="acc-n font-display">05</span>
+              <div class="acc-mid">
+                <span class="acc-q">Quand souhaitez-vous disposer de votre solution ?</span>
+                <span class="acc-v" id="v-delai"></span>
+              </div>
+              <span class="acc-chev">⌄</span>
+            </button>
+            <div id="p-delai" class="acc-panel" hidden>
+              <div class="acc-opts opts-row">
+                <label class="opt"><input type="radio" name="delai" value="Moins de 1 mois"><span class="opt-txt">Moins de 1 mois</span></label>
+                <label class="opt"><input type="radio" name="delai" value="1–3 mois"><span class="opt-txt">1–3 mois</span></label>
+                <label class="opt"><input type="radio" name="delai" value="3–6 mois"><span class="opt-txt">3–6 mois</span></label>
+                <label class="opt"><input type="radio" name="delai" value="+6 mois"><span class="opt-txt">Plus de 6 mois</span></label>
+                <label class="opt opt-wide"><input type="radio" name="delai" value="Calendrier à définir"><span class="opt-txt">Calendrier à définir</span></label>
+              </div>
+            </div>
+            <p class="ferr" id="e-delai" hidden>Veuillez sélectionner une option.</p>
+          </div>
+
+          <div class="f-sep"></div>
+
+          <fieldset class="coords">
+            <legend class="coords-leg font-display">Vos coordonnées</legend>
+
+            <div class="fgrid">
+              <div class="fg fg-full">
+                <label class="flbl" for="fe-co">Nom de l'entreprise <span class="req">*</span></label>
+                <input type="text" id="fe-co" name="entreprise" class="finp" placeholder="Votre société" autocomplete="organization" required />
+                <p class="ferr" id="e-co" hidden>Champ obligatoire.</p>
+              </div>
+
+              <div class="fg">
+                <label class="flbl" for="fe-nm">Nom complet <span class="req">*</span></label>
+                <input type="text" id="fe-nm" name="nom" class="finp" placeholder="Prénom et nom" autocomplete="name" required />
+                <p class="ferr" id="e-nm" hidden>Champ obligatoire.</p>
+              </div>
+
+              <div class="fg">
+                <label class="flbl" for="fe-role">Fonction / poste</label>
+                <input type="text" id="fe-role" name="fonction" class="finp" placeholder="Ex. Directeur projet, acheteur..." />
+              </div>
+
+              <div class="fg">
+                <label class="flbl" for="fe-tl">Téléphone / WhatsApp <span class="req">*</span></label>
+                <input type="tel" id="fe-tl" name="telephone" class="finp" placeholder="+212 ..." autocomplete="tel" required />
+                <p class="ferr" id="e-tl" hidden>Numéro invalide.</p>
+              </div>
+
+              <div class="fg">
+                <label class="flbl" for="fe-em">E-mail professionnel</label>
+                <input type="email" id="fe-em" name="email" class="finp" placeholder="vous@entreprise.com" autocomplete="email" />
+                <p class="ferr" id="e-em" hidden>E-mail invalide.</p>
+              </div>
+
+              <div class="fg">
+                <label class="flbl" for="fe-pays">Pays <span class="req">*</span></label>
+                <input type="text" id="fe-pays" name="pays" class="finp" placeholder="Pays du projet" autocomplete="country-name" required />
+                <p class="ferr" id="e-pays" hidden>Champ obligatoire.</p>
+              </div>
+
+              <div class="fg">
+                <label class="flbl" for="fe-vi">Ville <span class="req">*</span></label>
+                <input type="text" id="fe-vi" name="ville" class="finp" placeholder="Ville du projet" autocomplete="address-level2" required />
+                <p class="ferr" id="e-vi" hidden>Champ obligatoire.</p>
+              </div>
+            </div>
+          </fieldset>
+
+          <p class="rgpd">
+            En soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous contacter
+            dans le cadre de votre demande. Vérifiez vos mentions de confidentialité avant mise en ligne.
+          </p>
+
+          <button type="submit" id="sub-btn" class="btn-sub font-display">
+            <span id="sub-lbl">Envoyer mon projet à AMM</span>
+            <svg id="sub-spin" class="spin-ico" viewBox="0 0 24 24" fill="none" hidden>
+              <circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.25)" stroke-width="3" />
+              <path d="M12 2a10 10 0 0 1 10 10" stroke="white" stroke-width="3" stroke-linecap="round" />
+            </svg>
+          </button>
+        </form>
+
+        <div id="f-ok" class="f-ok" hidden>
+          <div class="ok-ico">✓</div>
+          <p class="ok-title font-display">Votre projet a bien été transmis</p>
+          <p class="ok-msg">L’équipe AMM pourra utiliser vos réponses pour préparer le premier échange.</p>
+        </div>
+
+        <div id="f-err" class="f-err-box" hidden>
+          Une erreur est survenue. Veuillez réessayer ou contacter directement AMM.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec-contact">
+    <div class="sec-wrap">
+      <div class="contact-simple fade-up">
+        <div>
+          <span class="eyebrow font-display">AMM — Atlantic Machinery Manufacturing</span>
+          <h2 class="sec-title font-display text-white">
+            UN PROJET À CADRER ?<br />
+            <span class="text-brand">PARLONS-EN.</span>
+          </h2>
+        </div>
+
+        <div class="contact-actions">
+          <a href="mailto:sales@a-machinery.com" class="btn-ghost">sales@a-machinery.com</a>
+          <a href="#qualification" class="btn-red">Étudier mon projet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="foot-inner">
+      <div class="foot-logo">
+        <img src="Logo.png" alt="Logo AMM" class="logo-img" />
+      </div>
+      <p class="foot-copy">
+        © <span id="yr"></span> AMM. Tous droits réservés.
+      </p>
+      <nav class="foot-links">
+        <a href="#" class="foot-lnk">Mentions légales</a>
+        <a href="#" class="foot-lnk">Confidentialité</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script-pain.js"></script>
+</body>
+</html>
